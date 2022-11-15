@@ -8,7 +8,7 @@ function Post({ details }) {
   const [d, setD] = useState(downs);
 
   const { data, loading, error, reFetch } = useFetch(
-    `http://localhost:3001/user/getone/${userId}`
+    `https://muzzammil.herokuapp.com/user/getone/${userId}`
   );
   const [meData, meError] = useContext(UserContext);
   if (error) console.log(error);

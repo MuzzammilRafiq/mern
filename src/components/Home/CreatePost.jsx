@@ -21,7 +21,7 @@ function CreatePost() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3001/post/",
+        "https://muzzammil.herokuapp.com/post/",
         { text },
         {
           headers: {

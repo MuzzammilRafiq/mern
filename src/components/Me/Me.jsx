@@ -9,7 +9,9 @@ function Me() {
   const navigate = useNavigate();
   const [meData, meLoading, meError] = useContext(UserContext);
 
-  const { data, loading, error } = useFetch("http://localhost:3001/post/");
+  const { data, loading, error } = useFetch(
+    "https://muzzammil.herokuapp.com/post/"
+  );
   if (!localStorage.getItem("access_token")) {
     navigate("/login");
     return;

@@ -13,7 +13,7 @@ export const UserContext = createContext({});
 function App() {
   let meData, meLoading, meError, meRefetch;
   const { data, loading, error, reFetch } = useFetch(
-    `http://localhost:3001/user/get`,
+    `https://muzzammil.herokuapp.com/user/get`,
     {
       headers: {
         access_token: localStorage.getItem("access_token"),

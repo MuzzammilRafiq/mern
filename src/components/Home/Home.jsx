@@ -6,7 +6,7 @@ import Post from "./Post";
 
 function Home() {
   const { data, loading, error, reFetch } = useFetch(
-    "http://localhost:3001/post/"
+    "https://muzzammil.herokuapp.com/post/"
   );
   const a = localStorage.getItem("access_token");
   const navigate = useNavigate();

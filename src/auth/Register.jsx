@@ -11,12 +11,15 @@ function Login() {
   const login = async (e) => {
     e.preventDefault(); //prevents from refreshing page
     try {
-      const res = await axios.post("http://localhost:3001/auth/register", {
-        username,
-        password,
-        name,
-        imgsrc,
-      });
+      const res = await axios.post(
+        "https://muzzammil.herokuapp.com/auth/register",
+        {
+          username,
+          password,
+          name,
+          imgsrc,
+        }
+      );
       setPassword("");
       setUsername("");
       setName("");

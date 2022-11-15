@@ -11,10 +11,13 @@ function Login() {
   const login = async (e) => {
     e.preventDefault(); //prevents from refreshing page
     try {
-      const res = await axios.post("http://localhost:3001/auth/login", {
-        username,
-        password,
-      });
+      const res = await axios.post(
+        "https://muzzammil.herokuapp.com/auth/login",
+        {
+          username,
+          password,
+        }
+      );
       localStorage.setItem("access_token", res.data.access_token);
 
       setPassword("");
